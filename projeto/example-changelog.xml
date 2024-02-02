@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd ">
+        <!-- CARGA INICIAL -->
+        <changeSet id="0.0.0-00" author="Rubens">
+            <tagDatabase tag="0.0.0" />
+        </changeSet>
+
+    <!-- Criacao do bloco include a partir da tag 0.0.1 -->
+    <include file="changelog/mudanca-0.0.1.xml" />
+    <include file="changelog/mudanca-0.0.2.xml" />
+    <include file="changelog/mudanca-0.0.3.xml" />
+    <include file="changelog/mudanca-0.0.4.xml" />
+
+</databaseChangeLog>

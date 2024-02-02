@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd ">
+       
+    <!-- Mudanca 0.0.1 criacao da tabela estado -->
+    <changeSet id="0.0.4-01" author="Rubens">
+        <tagDatabase tag="0.0.4" />
+    </changeSet>
+
+    <changeSet id="0.0.4-02" author="Rubens" labels="example-label" context="example-context">
+        <comment>example-comment</comment>
+        <createTable tableName="regiao">
+            <column name="Id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="PRIMARY" />
+            </column>
+            <column name="Nome" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>         
+        </createTable>
+        <rollback>
+            <dropTable tableName="regiao" />
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

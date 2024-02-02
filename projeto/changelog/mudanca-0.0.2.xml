@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd ">
+       
+    <!-- Mudanca 0.0.1 criacao da tabela estado -->
+    <changeSet id="0.0.2-01" author="Rubens">
+        <tagDatabase tag="0.0.2" />
+    </changeSet>
+
+    <changeSet id="0.0.2-02" author="Rubens" labels="example-label" context="example-context">
+        <comment>example-comment</comment>
+        <createTable tableName="estado">
+            <column name="Id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="CodigoUf" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Nome" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Uf" type="CHAR(2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Regiao" type="INT">
+                <constraints nullable="false"/>
+            </column>          
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
